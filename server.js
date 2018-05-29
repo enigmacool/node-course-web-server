@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3002;
 
 var app = express();
 
@@ -36,6 +37,6 @@ app.get('/about', (req, res)=>{
     });
 });
 
-app.listen(3002, ()=>{
-    console.log('Server is listening at port 3002');
+app.listen(port, ()=>{
+    console.log(`Server is listening at port ${port}`);
 });
